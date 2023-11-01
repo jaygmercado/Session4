@@ -1,0 +1,92 @@
+/* 
+    1. Cascading
+        Most CSS rules applied to an element are inherited by all the descendants of that element.
+        However, there are exceptions.
+        For example, the layout properties (mergin, padding, position, width) and the decorative properties (border, background...) do not cascade.
+*/
+
+img {
+  height: 250px;
+  width: 500px;
+}
+
+ul {
+  margin: 200px;
+}
+
+li:nth-child(4) {
+  list-style-type: georgian;
+}
+
+li:nth-child(odd) {
+  list-style-image: url("https://media3.giphy.com/media/bGgsc5mWoryfgKBx1u/200w.gif?cid=6c09b952f4x8wkjfnabkj5nm5gpybb4ma1uy6ir3vt7tc35z&ep=v1_gifs_search&rid=200w.gif&ct=g");
+}
+
+/* 
+    2. background-image
+        Sets the background color of an element
+        Occupies the total size of the element, including padding and border (but not margin)
+    3. background-size
+        Specifies the size of the background image;
+    4. background-position
+        Sets the starting position of a background image.
+*/
+#introduction {
+  background-image: url("https://images.unsplash.com/photo-1656610171681-382fccafe383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  color: white;
+  height: 600px;
+  background-position: 100%;
+  background-size: auto;
+}
+
+/* 
+    5. border-style
+        Sets the style of an element's borders.
+        Supports: none, hidden, solid, dotted, dashed, double, groove, ridge, inset, and outset.
+    6. border-color
+        Sets the color of an element's borders
+    7. border-width
+        Sets the width of the border
+        Supports: px, em, rem.
+*/
+#main-content {
+  border-style: dotted;
+  border-color: red;
+  border-width: 10px;
+  margin-bottom: 300px;
+}
+
+/* 
+    8. Best practice
+        use the <img> tag when the image is an essential part of the content, and
+        use the CSS background-image property when the image is used for decorative or design purposes
+*/
+
+/* 
+    BOX Model
+    9.  Content
+        The content of the box is where text and/or images appear.
+    10. Padding
+        Area between the content and the border
+    11. Border
+        Area around the padding.
+    12. Margin
+        Area outside the border. It touches the margin of other elements.
+*/
+#box {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  padding: 50px;
+  border: solid 10px red;
+  margin: 50px;
+}
+
+#box-2 {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  padding: 50px;
+  border: solid 10px red;
+  margin: 60px;
+}
